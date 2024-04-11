@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: mymonitor-rs
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web1
+      dc: "IN"
+      env: "prod"
+  template:
+    metadata:
+      labels:
+        dc: "IN"
+        app: "monitorapp"
+        env: "prod"
+    spec:
+      container:
+      - name: "Mymoniter"
+        image: "vimal13/grafana"
+
+ 

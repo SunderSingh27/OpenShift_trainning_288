@@ -1,0 +1,14 @@
+apiVersion: v1
+kind:Service
+metadata:
+  name: mylwsvc
+spec:
+  type: NodePort
+  selector:
+    region: india
+  ports:
+    - name: mywebport
+      port:1234
+      targetPort:80
+      nodePort:31000
+      protocol: TCP

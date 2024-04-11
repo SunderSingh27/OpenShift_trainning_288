@@ -1,0 +1,16 @@
+mariadb:
+  auth:
+    username:todouser
+    password:todopwd
+    database:tododb
+  primary:
+    podSecurityContext:
+    	enabled:false
+	
+env:
+  - name: DATABASE_NAME
+    value: tododb
+  - name: DATAVASE_USER
+    value:todopwd
+  - name: DATABASE_SVC
+    value:todo-list-mariadb		

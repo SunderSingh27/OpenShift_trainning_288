@@ -1,0 +1,19 @@
+apiVersion:apps/v1
+kind: ReplicaSet
+metadata:
+  name: "myrc1"
+spec: 
+  selector:
+    matchLabels:
+      region: india
+replicas: 5
+template:
+  metadata:
+    name: "mypod2"
+    labels:
+      region: "india"
+
+spec:
+  containers:
+  - name: "c1"
+    image: "vimal13/apache-webserver-php"
