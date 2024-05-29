@@ -18,3 +18,7 @@ objects:
 
 parameters:
 - name: POD_NAME
+  description: "This is pod name parameters..."
+  displayName: "i m display pod parameters...."
+  from: '[A-Z0-9]{8}'
+  generate: expression
