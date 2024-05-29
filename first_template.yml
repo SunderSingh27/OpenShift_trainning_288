@@ -3,18 +3,18 @@ kind: Template
 metadata:
   name: mytemppod
 objects:
--  apiVersion: v1
-   kind: Pod
-   metadata:
-     name: $POD_NAME
-     labels:
-       dc: "IN"
-       app: "web1"
-       env: "prod"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    name: "${POD_NAME}"
+    labels:
+      dc: "IN"
+      app: "web1"
+      env: "prod"
   spec:
     containers:
     - name: "myweb"
       image: "tomcat"
 
 parameters:
--  name: POD_NAME
+- name: POD_NAME
